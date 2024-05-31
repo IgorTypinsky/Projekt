@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>Podróże.pl</h1>
+            <h1><a href="index.html" class="logo-link">Podróże.pl</a></h1>
         </div>
     </header>
     <main>
@@ -18,13 +18,44 @@
             <h2>Kup Bilet na Pociąg</h2>
             <form id="ticket-form">
                 <label for="from">Skąd:</label>
-                <input type="text" id="from" name="from" required>
+                <select id="from" name="from" required>
+                    <option value="">Wybierz miasto</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Łódź">Łódź</option>
+                    <option value="Wrocław">Wrocław</option>
+                    <option value="Poznań">Poznań</option>
+                    <option value="Gdańsk">Gdańsk</option>
+                    <option value="Szczecin">Szczecin</option>
+                    <option value="Bydgoszcz">Bydgoszcz</option>
+                    <option value="Lublin">Lublin</option>
+                    <option value="Białystok">Białystok</option>
+                    <option value="Przemyśl">Przemyśl</option>
+                    <option value="Włocławek">Włocławek</option>
+                </select>
 
                 <label for="to">Dokąd:</label>
-                <input type="text" id="to" name="to" required>
+                <select id="to" name="to" required>
+                    <option value="">Wybierz miasto</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Łódź">Łódź</option>
+                    <option value="Wrocław">Wrocław</option>
+                    <option value="Poznań">Poznań</option>
+                    <option value="Gdańsk">Gdańsk</option>
+                    <option value="Szczecin">Szczecin</option>
+                    <option value="Bydgoszcz">Bydgoszcz</option>
+                    <option value="Lublin">Lublin</option>
+                    <option value="Białystok">Białystok</option>
+                    <option value="Przemyśl">Przemyśl</option>
+                    <option value="Włocławek">Włocławek</option>
+                </select>
 
                 <label for="date">Data:</label>
                 <input type="date" id="date" name="date" required>
+
+                <label for="time">Godzina:</label>
+                <input type="time" id="time" name="time" required>
 
                 <label for="class">Klasa:</label>
                 <select id="class" name="class">
@@ -32,7 +63,7 @@
                     <option value="2">Druga Klasa</option>
                 </select>
 
-                <button type="submit">Wyszukaj połączenia</button>
+                <button type="submit">Kup bilet</button>
             </form>
             <div id="results"></div>
             <div id="qr-code"></div>
