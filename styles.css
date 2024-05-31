@@ -214,7 +214,20 @@ form button:hover {
 
 
 #results, #qr-code {
-    margin-top: 5px;
+    margin-top: 20px;
     text-align: center;
+}
+
+#qr-code {
     margin-bottom: 100px;
+}
+
+
+.logo-link {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-link:hover {
+    text-decoration: underline;
 }
