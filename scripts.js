@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const from = document.getElementById('from').value;
             const to = document.getElementById('to').value;
             const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
             const travelClass = document.getElementById('class').value;
 
             const ticketInfo = {
                 from,
                 to,
                 date,
+                time,
                 travelClass
             };
 
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>Skąd: ${ticketInfo.from}</p>
             <p>Dokąd: ${ticketInfo.to}</p>
             <p>Data: ${ticketInfo.date}</p>
+            <p>Godzina: ${ticketInfo.time}</p>
             <p>Klasa: ${ticketInfo.travelClass === '1' ? 'Pierwsza Klasa' : 'Druga Klasa'}</p>
         `;
     }
