@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kup Bilet na Pociąg</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Podróże.pl</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h2>Kup Bilet na Pociąg</h2>
+            <form id="ticket-form">
+                <label for="from">Skąd:</label>
+                <input type="text" id="from" name="from" required>
+
+                <label for="to">Dokąd:</label>
+                <input type="text" id="to" name="to" required>
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="class">Klasa:</label>
+                <select id="class" name="class">
+                    <option value="1">Pierwsza Klasa</option>
+                    <option value="2">Druga Klasa</option>
+                </select>
+
+                <button type="submit">Wyszukaj połączenia</button>
+            </form>
+            <div id="results"></div>
+            <div id="qr-code"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube</a>
+                <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank" class="social-link">Twitter</a>
+                <a href="https://www.facebook.com" target="_blank" class="social-link">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
