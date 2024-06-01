@@ -16,6 +16,7 @@
     <main>
         <section class="container">
             <h2>Kup Bilet na Pociąg</h2>
+            <div class="form-container">
             <form id="ticket-form">
                 <label for="from">Skąd:</label>
                 <select id="from" name="from" required>
@@ -57,14 +58,32 @@
                 <label for="time">Godzina:</label>
                 <input type="time" id="time" name="time" required>
 
+                <label for="ticket-quantity">Liczba biletów:</label>
+                <input type="number" id="ticket-quantity" name="ticket-quantity" min="1" max="10" required>
+
                 <label for="class">Klasa:</label>
                 <select id="class" name="class">
                     <option value="1">Pierwsza Klasa</option>
                     <option value="2">Druga Klasa</option>
                 </select>
 
-                <button type="submit">Kup bilet</button>
+                <label for="discount">Ulga:</label>
+                <select id="discount" name="discount">
+                    <option value="brak">Brak</option>
+                    <option value="student">Student 51%</option>
+                    <option value="senior">Senior 78%</option>
+                    <option value="dziecko">Dziecko 37%</option>
+                </select>
+
+                <button type="button" id="calculate-price">Oblicz cenę</button>
+                <button type="submit" id="buy-ticket" style="display:none;">Kup bilet</button>
             </form>
+            <div id="image-container">
+                <img src="train.jpg" alt="Pociąg" class="main-image"/>
+                <img src="train2.jpg" alt="Pociąg" class="main-image"/>
+            </div>
+            </div>
+            <div id="price"></div>
             <div id="results"></div>
             <div id="qr-code"></div>
         </section>
