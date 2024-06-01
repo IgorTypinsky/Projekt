@@ -103,7 +103,7 @@ main {
 footer {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -138,24 +138,40 @@ footer {
     }
 }
 
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: left;
     margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    width: 60%;
+    margin-right: 20px;
 }
 
 form label {
     font-weight: bold;
+    color: #56ab2f;
 }
 
-form input, form textarea {
+form input, form select, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    max-width: 500px;
+    max-width: none; 
+    box-sizing: border-box;
 }
 
 form button {
@@ -230,4 +246,28 @@ form button:hover {
 
 .logo-link:hover {
     text-decoration: underline;
+}
+
+#price {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+#image-container {
+    display: flex;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
