@@ -8,6 +8,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    document.getElementById('calculate-price').addEventListener('click', function() {
+        const from = document.getElementById('from').value;
+        const to = document.getElementById('to').value;
+        const travelClass = document.getElementById('class').value;
+        const ticketQuantity = document.getElementById('ticket-quantity').value;
+        const discount = document.getElementById('discount').value;
+
+        if (from === "" || to === "" || travelClass === "" || ticketQuantity === "" || discount === "") {
+            alert("Proszę wypełnić wszystkie pola formularza przed obliczeniem ceny.");
+            return;
+        }
+
+        let basePrice = travelClass === '1' ? 100 : 50;
+        let discountFactor = 1;
+
+        if (discount === 'student') discountFactor = 0.51;
+        if (discount === 'senior') discountFactor = 0.78;
+        if (discount === 'dziecko') discountFactor = 0.37;
+
+        const totalPrice = basePrice * ticketQuantity * discountFactor;
+
+        const priceDiv = document.getElementById('price');
+        priceDiv.innerHTML = `<p>Cena: ${totalPrice} PLN</p>`;
+
+        document.getElementById('buy-ticket').style.display = 'block';
+    });
+
+
     if (document.getElementById('ticket-form')) {
         document.getElementById('ticket-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -16,17 +44,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
             const travelClass = document.getElementById('class').value;
+            const ticketQuantity = document.getElementById('ticket-quantity').value;
+            const discount = document.getElementById('discount').value;
 
             const ticketInfo = {
                 from,
                 to,
                 date,
                 time,
-                travelClass
+                travelClass,
+                ticketQuantity,
+                discount
             };
 
             displayResults(ticketInfo);
-
             generateQRCode(ticketInfo);
         });
     }
@@ -40,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>Data: ${ticketInfo.date}</p>
             <p>Godzina: ${ticketInfo.time}</p>
             <p>Klasa: ${ticketInfo.travelClass === '1' ? 'Pierwsza Klasa' : 'Druga Klasa'}</p>
+            <p>Liczba biletów: ${ticketInfo.ticketQuantity}</p>
+            <p>Ulga: ${ticketInfo.discount}</p>
         `;
     }
 
