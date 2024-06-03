@@ -1,41 +1,4 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background: linear-gradient(90deg, #56ab2f, #a8e063);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-}
-
-main {
-    flex: 1;
-}
-
+/* strona główna */
 .intro, .testimonials, .contact {
     padding: 40px 0;
     text-align: center;
@@ -115,6 +78,46 @@ footer {
     justify-content: center;
 }
 
+/* wspólne */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(90deg, #56ab2f, #a8e063);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+main {
+    flex: 1;
+}
+
 .social-link {
     color: white;
     margin: 0 15px;
@@ -125,6 +128,26 @@ footer {
 
 .social-link:hover {
     color: #a8e063;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.scroll-objects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.left-object, .right-object {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(86, 171, 47, 0.5);
+    border-radius: 50%;
+    animation: moveSideways 5s linear infinite;
 }
 
 @keyframes fadeIn {
@@ -138,11 +161,37 @@ footer {
     }
 }
 
+@keyframes moveSideways {
+    0% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(200px);
+    }
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+/* podstrony */
+.container-page{
+    height: 30px;
+}
+
+.social-media-page{
+    padding: 5px;
+}
+
+.form-wrapper{
+    width: 100%;
+}
+
 .form-container {
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
 }
 
 form {
@@ -150,7 +199,7 @@ form {
     flex-direction: column;
     gap: 10px;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 5px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -189,25 +238,6 @@ form button:hover {
     background-color: #a8e063;
 }
 
-.scroll-objects {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    pointer-events: none;
-}
-
-.left-object, .right-object {
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(86, 171, 47, 0.5);
-    border-radius: 50%;
-    animation: moveSideways 5s linear infinite;
-}
-
 .left-object {
     left: -150px;
 }
@@ -216,28 +246,11 @@ form button:hover {
     right: -150px;
 }
 
-@keyframes moveSideways {
-    0% {
-        transform: translateY(-50%) translateX(0);
-    }
-    50% {
-        transform: translateY(-50%) translateX(200px);
-    }
-    100% {
-        transform: translateY(-50%) translateX(0);
-    }
-}
-
 
 #results, #qr-code {
-    margin-top: 20px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
-
-#qr-code {
-    margin-bottom: 100px;
-}
-
 
 .logo-link {
     text-decoration: none;
@@ -249,25 +262,25 @@ form button:hover {
 }
 
 #price {
-    margin-top: 20px;
     font-size: 1.2rem;
     font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
-.main-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin-top: 20px; 
-    margin-bottom: 20px;
-}
-
-#image-container {
+/*pociąg*/
+body.background-image {
+    background: url('train2.jpg');
+    background-size: cover;
     display: flex;
-    margin-top: 20px; 
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.train-text{
+    text-align: center;
+    color: #174900;
 }
