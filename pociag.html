@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="background-image">
     <header>
         <div class="container">
             <h1><a href="index.html" class="logo-link">Podróże.pl</a></h1>
         </div>
     </header>
     <main>
-        <section class="container">
-            <h2>Kup Bilet na Pociąg</h2>
+        <section class="form-wrapper">
             <div class="form-container">
             <form id="ticket-form">
+                <div class="train-text">
+                    <h2>Kup bilet na pociąg</h2>
+                </div>
                 <label for="from">Skąd:</label>
                 <select id="from" name="from" required>
                     <option value="">Wybierz miasto</option>
@@ -46,8 +48,7 @@
                     <option value="Gdańsk">Gdańsk</option>
                     <option value="Szczecin">Szczecin</option>
                     <option value="Bydgoszcz">Bydgoszcz</option>
-                    <option value="Lublin">Lublin</option>
-                    <option value="Białystok">Białystok</option>
+                    <option value="Lublin">Lublin</                    <option value="Białystok">Białystok</option>
                     <option value="Przemyśl">Przemyśl</option>
                     <option value="Włocławek">Włocławek</option>
                 </select>
@@ -76,21 +77,16 @@
                 </select>
 
                 <button type="button" id="calculate-price">Oblicz cenę</button>
+                    <div id="price"></div>
                 <button type="submit" id="buy-ticket" style="display:none;">Kup bilet</button>
+                    <div id="results"></div>
+                    <div id="qr-code"></div>
             </form>
-            <div id="image-container">
-                <img src="train.jpg" alt="Pociąg" class="main-image"/>
-                <img src="train2.jpg" alt="Pociąg" class="main-image"/>
-            </div>
-            </div>
-            <div id="price"></div>
-            <div id="results"></div>
-            <div id="qr-code"></div>
         </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="social-media">
+        <div class="container-page">
+            <div class="social-media-page">
                 <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube</a>
                 <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
                 <a href="https://www.twitter.com" target="_blank" class="social-link">Twitter</a>
