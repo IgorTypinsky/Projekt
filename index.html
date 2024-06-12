@@ -8,22 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <h1>Podróże.pl</h1>
         </div>
     </header>
 
     <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Witamy w Podróże.pl</h2>
-                <p>Znajdź najlepsze oferty na bilety autobusowe, lotnicze, promowe i pociągowe. Podróżuj z nami i ciesz się najlepszymi ofertami na rynku!</p>
-            </div>
-        </section>
-
         <section class="services">
-            <div class="container">
+            <div id="tlo">
+                <div class="gallery">
+                    <div class="gallery-image" style="background-image: url('tlo6.jpg');"></div>
+                    <div class="gallery-image" style="background-image: url('tlo2.jpg');"></div>
+                    <div class="gallery-image" style="background-image: url('tlo3.jpg');"></div>
+                    <div class="gallery-image" style="background-image: url('tlo4.jpg');"></div>
+                    <div class="gallery-image" style="background-image: url('tlo5.jpeg');"></div>
+                    <div class="gallery-image" style="background-image: url('tlo1.jpg');"></div>
+                    <div class="gallery-image" style="background-image: url('tlo7.jpg');"></div>
+                </div>
+            </div>
+            <div class="container services-content">
+                <h2 id="linkh2">Wybierz środek transportu</h2>
                 <div class="links-container">
                     <a href="#autobusowe" class="link-box">
                         <div class="icon">🚌</div>
@@ -37,7 +42,7 @@
                         <div class="icon">⛴️</div>
                         <div class="text">Bilety Promem</div>
                     </a>
-                    <a href="pociag.html" class="link-box">
+                    <a href="#pociągowe" class="link-box">
                         <div class="icon">🚆</div>
                         <div class="text">Bilety Pociągowe</div>
                     </a>
@@ -45,32 +50,36 @@
             </div>
         </section>
 
-        <section class="testimonials">
-            <div class="container">
-                <h2>Opinie naszych klientów</h2>
-                <div class="testimonial">
-                    <p>"Najlepsze oferty na bilety, zawsze podróżuję z Podróże.pl!" - Anna Kowalska</p>
+        <div class="white-background">
+            <section class="testimonials">
+                <div class="container">
+                    <h2>Opinie naszych klientów</h2>
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p>"Najlepsze oferty na bilety, zawsze podróżuję z Podróże.pl!" - Anna Kowalska</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p>"Szybko i łatwo znalezione bilety, polecam!" - Jan Nowak</p>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>"Szybko i łatwo znalezione bilety, polecam!" - Jan Nowak</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="contact">
-            <div class="container">
-                <h2>Kontakt</h2>
-                <form>
-                    <label for="name">Imię:</label>
-                    <input type="text" id="name" name="name">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                    <label for="message">Wiadomość:</label>
-                    <textarea id="message" name="message"></textarea>
-                    <button type="submit">Wyślij</button>
-                </form>
-            </div>
-        </section>
+            <section class="contact">
+                <div class="container">
+                    <h2>Kontakt</h2>
+                    <form>
+                        <label for="name">Imię:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <label for="message">Wiadomość:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit">Wyślij</button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -80,10 +89,16 @@
                 <a href="https://www.instagram.com" target="_blank" class="social-link">Instagram</a>
                 <a href="https://www.twitter.com" target="_blank" class="social-link">Twitter</a>
                 <a href="https://www.facebook.com" target="_blank" class="social-link">Facebook</a>
+                <a href="#faq" class="social-link">FAQ</a>
+                <a href="#privacy-policy" class="social-link">Polityka Prywatności</a>
             </div>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <div class="scroll-objects">
+        <div class="left-object"></div>
+        <div class="right-object"></div>
+        </div>
+    <script src="background.js" defer></script>
 </body>
 </html>
